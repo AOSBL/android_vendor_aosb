@@ -1,8 +1,8 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common AOSB stuff
+$(call inherit-product, vendor/aosb/config/common.mk)
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include AOSB audio files
+include vendor/aosb/config/aosb_audio.mk
 
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -11,5 +11,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_COPY_FILES += \
-        vendor/cm/prebuilt/common/bootanimation/800.zip:system/media/bootanimation.zip
+        vendor/aosb/prebuilt/common/bootanimation/800.zip:system/media/bootanimation.zip
 endif

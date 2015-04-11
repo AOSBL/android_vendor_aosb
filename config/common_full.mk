@@ -1,13 +1,13 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common AOSB stuff
+$(call inherit-product, vendor/aosb/config/common.mk)
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include AOSB audio files
+include vendor/aosb/config/aosb_audio.mk
 
-# Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
+# Include AOSB LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/aosb/overlay/dictionaries
 
-# Optional CM packages
+# Optional AOSB packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -21,7 +21,7 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     PhotoPhase
 
-# Extra tools in CM
+# Extra tools in AOSB
 PRODUCT_PACKAGES += \
     vim \
     zip \
