@@ -211,11 +211,7 @@ AOSB_VERSION_MINOR = 0
 ifeq ($(AOSB_RELEASE),true)
     AOSB_VERSION := aosb-$(AOSB_VERSION_MAJOR).$(AOSB_VERSION_MINOR)-$MILESTONE-$(shell date -u +%Y%m%d)-$(AOSB_BUILD)
 else
-    ifeq ($(AOSB_VERSION_MINOR),0)
-       AOSB_VERSION := aosb-$(AOSB_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(AOSB_BUILD)
-    else
-       AOSB_VERSION := aosb-$(AOSB_VERSION_MAJOR).$(AOSB_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(AOSB_BUILD)
-    endif
+    AOSB_VERSION := aosb-$(AOSB_VERSION_MAJOR).$(AOSB_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(AOSB_BUILD)
 endif
 
 AOSB_DISPLAY_VERSION := $(AOSB_VERSION)
