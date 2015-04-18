@@ -81,9 +81,11 @@ PRODUCT_COPY_FILES += \
     vendor/aosb/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/aosb/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/aosb/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+endif
 
 # AOSB-specific init file
 PRODUCT_COPY_FILES += \
